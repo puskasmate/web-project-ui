@@ -1,0 +1,24 @@
+<div class= "container">
+    <h2>Add new Film</h2>
+
+    <form #adduserform = "ngForm" (ngSubmit)="addMovieformsubmit()">
+        
+        <div class="form-group">
+            <label for="name">Title:</label>
+            <input type="text" class="form-control" required [(ngModel)]="movie.movieName" name ="name">
+        
+        </div>
+        <div class="form-group">
+            <label for="name">Theme:</label>
+            <input type="text" class="form-control" required [(ngModel)]="movie.movieTheme" name ="theme">
+        
+        </div>
+        <div class="form-group">
+            <label for="name">IMDb Rating:</label>
+            <input type="text" class="form-control" required [(ngModel)]="movie.movieRating" name ="rating">
+        
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>&nbsp;
+        <button type="button" class="btn btn-primary" (click)="gotolist()">Back</button>
+    </form>
+</div>

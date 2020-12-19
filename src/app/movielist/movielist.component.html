@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Movies i have watched</h2>
+    <p>It is a simple table to store the movies i've watched. :)</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Theme</th>
+          <th>IMDb rating</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="_movielist?.length == 0">
+          <td colspan="5" style="text-align: center"><h2>There are no films yet</h2></td>
+        </tr>
+          <tr *ngFor="let movie of _movielist">
+            <th >{{movie.movieId}}</th>
+            <td>{{movie.movieName}}</td>
+            <td>{{movie.movieTheme}}</td>
+            <td>{{movie.movieRating}}</td>
+            <td><button type="button" class="btn btn-primary" (click)="goToEditMovie(movie.movieId)">Edit</button>&nbsp;
+              <button type="button" class="btn btn-info" (click)="goToViewMovie(movie.movieId)">View</button>&nbsp;
+              <button type="button" class="btn btn-danger" (click)="deleteMovie(movie.movieId)">Delete</button>
+              </td>
+          </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-success" (click)="goToAddMovie()">Add</button>
+  </div>

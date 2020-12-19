@@ -1,0 +1,21 @@
+<div class="container">
+    <p>The details of the selected movie. :)</p>            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Theme</th>
+          <th>IMDb rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+            <th >{{movie.movieId}}</th>
+            <td>{{movie.movieName}}</td>
+            <td>{{movie.movieTheme}}</td>
+            <td>{{movie.movieRating}}</td>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" (click)="gotolist()">Back</button>
+  </div>
